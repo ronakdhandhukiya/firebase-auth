@@ -18,7 +18,7 @@ import { onAuthStateChanged } from "firebase/auth";
   if (loading) return <h1>Loading...</h1>;
 
   if (!user) {
-    return <Navigate to="/authenticatio" />;
+    return <Navigate to="/authentication" />;
   }
 
   return children;

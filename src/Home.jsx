@@ -9,7 +9,7 @@ export default function Home() {
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (user) => {
       if (!user) {
-        navigate("/authentication");
+        navigate("/");
       }
     });
 
@@ -46,12 +46,12 @@ export default function Home() {
        <div className="flex justify-center">
          <button
            onClick={handleNavigate}
-          className="bg-indigo-600 hover:bg-indigo-700 text-white px-6 py-3 rounded-lg font-medium transition">
-          Go To Dashboard
-        </button>
-
-        <p></p>
+          className="bg-indigo-600 hover:bg-indigo-700 text-white px-6 py-3 rounded-lg font-medium transition"> Go To Dashboard</button> 
        </div>
+       <p className="text-center text-sm text-red-600 mt-4">
+   You must sign in or create an account to access the Dashboard. If you are not authenticated, you will be redirected to the Login page.
+</p>
+       
       </div>
     </div>
   );
